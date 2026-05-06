@@ -1,6 +1,6 @@
 //Problem 1
 
-const filterEvenNumbers = (array : number[]) : void   => {
+const filterEvenNumbers = (array : number[]) : number[]   => {
 
     const result : number[]=[];
 
@@ -11,10 +11,10 @@ const filterEvenNumbers = (array : number[]) : void   => {
     });
 
 
-    return(console.log(result));
+    return(result);
 }
 
-filterEvenNumbers([1, 2, 3, 4, 5, 6]);
+console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6]));
 
 
 //Problem 2
@@ -25,3 +25,20 @@ const reverseString = (string : string) : string =>{
 } 
 
 console.log(reverseString("typescript"));
+
+//Problem 3
+
+type StringOrNumber = string | number;
+
+const checkType = (value : StringOrNumber) : string =>{
+    let result : string = '';
+    if(typeof value === "number"){
+        result = "Number";
+    }else if (typeof value === "string"){
+        result = "String";
+    }
+
+    return result;
+}
+
+console.log(checkType("23"));
